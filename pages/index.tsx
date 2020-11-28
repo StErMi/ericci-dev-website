@@ -8,14 +8,14 @@ import {
   faInstagram,
 } from '@fortawesome/free-brands-svg-icons';
 
-import Image from 'next/image'
+import Image from 'next/image';
 
 const IndexPage = () => (
   <Layout title="Home | Emanuele Ricci ~ Full Stack Developer">
     <div className="grid grid-cols-7 h-screen bg-primary">
       <div className="col-span-4">
         <div className="w-full h-full relative">
-        <Image className="object-cover" src="/cover.jpeg" layout="fill" />
+          <Image className="object-cover" src="/cover.jpeg" layout="fill" />
         </div>
       </div>
       <div className="col-span-3 flex flex-col justify-center align-middle items-center">
@@ -29,35 +29,23 @@ const IndexPage = () => (
             / Alexa & Google Assistant Developer
           </div>
           <div className="pt-10 space-x-8 flex flex-row justify-center">
-            <div className="flex items-center">
-              <a
-                href="https://twitter.com/StErMi"
-                className="bg-primary p-2 rounded-full hover:border-button hover:text-button"
-              >
-                <FontAwesomeIcon icon={faTwitter} className="text-3xl " />
+            <div className="flex items-center bg-primary hover:border rounded-full p-5 hover:border-button hover:text-button">
+              <a href="https://twitter.com/StErMi">
+                <FontAwesomeIcon icon={faTwitter} className="text-3xl" />
               </a>
             </div>
-            <div className="flex items-center">
-              <a
-                href="https://www.linkedin.com/in/emanuelericci/"
-                className="bg-primary p-4 rounded-full hover:border-button hover:text-button"
-              >
+            <div className="flex items-center bg-primary hover:border rounded-full p-5 hover:border-button hover:text-button">
+              <a href="https://www.linkedin.com/in/emanuelericci/">
                 <FontAwesomeIcon icon={faLinkedinIn} className="text-3xl" />
               </a>
             </div>
-            <div className="flex items-center">
-              <a
-                href="https://github.com/StErMi"
-                className="bg-primary p-4 rounded-full hover:border-button hover:text-button"
-              >
+            <div className="flex items-center bg-primary hover:border rounded-full p-5 hover:border-button hover:text-button">
+              <a href="https://github.com/StErMi">
                 <FontAwesomeIcon icon={faGithub} className="text-3xl" />
               </a>
             </div>
-            <div className="flex items-center">
-              <a
-                href="https://www.instagram.com/ericci87"
-                className="bg-primary p-4 rounded-full hover:border-button hover:text-button"
-              >
+            <div className="flex items-center bg-primary hover:border rounded-full p-5 hover:border-button hover:text-button">
+              <a href="https://www.instagram.com/ericci87">
                 <FontAwesomeIcon icon={faInstagram} className="text-3xl" />
               </a>
             </div>
