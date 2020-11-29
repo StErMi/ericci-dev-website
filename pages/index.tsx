@@ -29,38 +29,26 @@ const IndexPage = () => (
             / Alexa & Google Assistant Developer
           </div>
           <div className="flex flex-row justify-center pt-10 space-x-8">
-            <a
-              href="https://twitter.com/StErMi"
-              className="flex items-center justify-center"
-            >
-              <div className="p-5 border rounded-full bg-primary border-primary hover:border-button hover:text-button">
+            <a href="https://twitter.com/StErMi">
+              <div className="flex items-center justify-center w-20 h-20 border rounded-full bg-primary border-primary hover:border-button hover:text-button">
                 <FontAwesomeIcon icon={faTwitter} className="text-3xl" />
               </div>
             </a>
 
-            <a
-              href="https://www.linkedin.com/in/emanuelericci"
-              className="flex items-center justify-center"
-            >
-              <div className="px-6 py-5 border rounded-full bg-primary border-primary hover:border-button hover:text-button">
+            <a href="https://www.linkedin.com/in/emanuelericci">
+              <div className="flex items-center justify-center w-20 h-20 border rounded-full bg-primary border-primary hover:border-button hover:text-button">
                 <FontAwesomeIcon icon={faLinkedinIn} className="text-3xl" />
               </div>
             </a>
 
-            <a
-              href="https://github.com/StErMi"
-              className="flex items-center justify-center"
-            >
-              <div className="p-5 border rounded-full bg-primary border-primary hover:border-button hover:text-button">
+            <a href="https://github.com/StErMi">
+              <div className="flex items-center justify-center w-20 h-20 border rounded-full bg-primary border-primary hover:border-button hover:text-button">
                 <FontAwesomeIcon icon={faGithub} className="text-3xl" />
               </div>
             </a>
 
-            <a
-              href="https://www.instagram.com/ericci87"
-              className="flex items-center justify-center"
-            >
-              <div className="px-6 py-5 border rounded-full bg-primary border-primary hover:border-button hover:text-button">
+            <a href="https://www.instagram.com/ericci87">
+              <div className="flex items-center justify-center w-20 h-20 border rounded-full bg-primary border-primary hover:border-button hover:text-button">
                 <FontAwesomeIcon icon={faInstagram} className="text-3xl" />
               </div>
             </a>
