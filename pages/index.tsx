@@ -8,55 +8,69 @@ import {
   faInstagram,
 } from '@fortawesome/free-brands-svg-icons';
 
-import Image from 'next/image';
+const IndexPage = () => {
+  const socialButtons = [
+    {
+      key: 'twitter',
+      icon: faTwitter,
+      url: 'https://twitter.com/StErMi',
+    },
+    {
+      key: 'linkedin',
+      icon: faLinkedinIn,
+      url: 'https://www.linkedin.com/in/emanuelericci',
+    },
+    {
+      key: 'github',
+      icon: faGithub,
+      url: 'https://github.com/StErMi',
+    },
+    {
+      key: 'instagram',
+      icon: faInstagram,
+      url: 'https://www.instagram.com/ericci87',
+    },
+  ];
 
-const IndexPage = () => (
-  <Layout title="Home | Emanuele Ricci ~ Full Stack Developer">
-    <div className="grid h-screen grid-cols-7 bg-primary">
-      <div className="col-span-4">
-        <div className="relative w-full h-full">
-          <Image className="object-cover" src="/cover.jpeg" layout="fill" />
+  return (
+    <Layout title="Home | Emanuele Ricci ~ Full Stack Developer">
+      <div className="w-full h-full lg:flex ">
+        <div className="lg:w-7/12 lg:h-screen">
+          <img className="object-cover w-full lg:h-full" src="/cover.jpeg" />
+        </div>
+        <div className="lg:w-5/12">
+          <div className="flex flex-col items-center justify-center h-full px-10 mt-10 space-y-10 text-center align-middle lg:mt-0 text-primary font-mulish">
+            <div className="text-6xl font-black">Emanuele Ricci</div>
+            <div className="text-2xl font-light leading">
+              Full Stack Deloper @{' '}
+              <a
+                className="font-bold underline"
+                href="https://soplaya.com/"
+                target="black"
+              >
+                Soplaya
+              </a>{' '}
+              / Alexa & Google Assistant Developer
+            </div>
+            <div>
+              <div className="flex flex-row justify-center space-x-8">
+                {socialButtons.map((button) => (
+                  <a href={button.url} target="black" key={button.key}>
+                    <div className="flex items-center justify-center w-20 h-20 border border-white rounded-full hover:border-button hover:text-button">
+                      <FontAwesomeIcon
+                        icon={button.icon}
+                        className="text-3xl"
+                      />
+                    </div>
+                  </a>
+                ))}
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      <div className="flex flex-col items-center justify-center col-span-3 align-middle">
-        <div className="px-32 text-center text-primary">
-          <div className="font-black font-mulish text-7xl">Emanuele Ricci</div>
-          <div className="py-10 text-2xl font-light">
-            Full Stack Deloper @{' '}
-            <a className="font-bold underline" href="https://soplaya.com/">
-              Soplaya
-            </a>{' '}
-            / Alexa & Google Assistant Developer
-          </div>
-          <div className="flex flex-row justify-center pt-10 space-x-8">
-            <a href="https://twitter.com/StErMi">
-              <div className="flex items-center justify-center w-20 h-20 border rounded-full bg-primary border-primary hover:border-button hover:text-button">
-                <FontAwesomeIcon icon={faTwitter} className="text-3xl" />
-              </div>
-            </a>
-
-            <a href="https://www.linkedin.com/in/emanuelericci">
-              <div className="flex items-center justify-center w-20 h-20 border rounded-full bg-primary border-primary hover:border-button hover:text-button">
-                <FontAwesomeIcon icon={faLinkedinIn} className="text-3xl" />
-              </div>
-            </a>
-
-            <a href="https://github.com/StErMi">
-              <div className="flex items-center justify-center w-20 h-20 border rounded-full bg-primary border-primary hover:border-button hover:text-button">
-                <FontAwesomeIcon icon={faGithub} className="text-3xl" />
-              </div>
-            </a>
-
-            <a href="https://www.instagram.com/ericci87">
-              <div className="flex items-center justify-center w-20 h-20 border rounded-full bg-primary border-primary hover:border-button hover:text-button">
-                <FontAwesomeIcon icon={faInstagram} className="text-3xl" />
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </Layout>
-);
+    </Layout>
+  );
+};
 
 export default IndexPage;
