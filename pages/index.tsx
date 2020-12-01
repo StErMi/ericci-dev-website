@@ -53,7 +53,7 @@ const IndexPage = () => {
               / Alexa & Google Assistant Developer
             </div>
             <div>
-              <div className="flex flex-row justify-center space-x-8">
+              <div className="flex flex-row justify-center">
                 {socialButtons.map((button) => (
                   <a href={button.url} target="black" key={button.key}>
                     <div className="flex items-center justify-center w-20 h-20 border border-white rounded-full hover:border-button hover:text-button">
